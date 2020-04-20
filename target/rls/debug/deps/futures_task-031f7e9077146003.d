@@ -1,0 +1,11 @@
+/home/naruto/Desktop/Q3/Asynchronous programming/async_pro/async_1/target/rls/debug/deps/futures_task-031f7e9077146003.rmeta: /home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/lib.rs /home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/spawn.rs /home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/future_obj.rs /home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/noop_waker.rs /home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/arc_wake.rs /home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/waker.rs /home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/waker_ref.rs
+
+/home/naruto/Desktop/Q3/Asynchronous programming/async_pro/async_1/target/rls/debug/deps/futures_task-031f7e9077146003.d: /home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/lib.rs /home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/spawn.rs /home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/future_obj.rs /home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/noop_waker.rs /home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/arc_wake.rs /home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/waker.rs /home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/waker_ref.rs
+
+/home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/lib.rs:
+/home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/spawn.rs:
+/home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/future_obj.rs:
+/home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/noop_waker.rs:
+/home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/arc_wake.rs:
+/home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/waker.rs:
+/home/naruto/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.4/src/waker_ref.rs:
