@@ -1,37 +1,37 @@
 // /* Example 1.1 */
-use std::thread;
-use std::time::Duration;
+// use std::thread;
+// use std::time::Duration;
 
-fn get_two_sites() {
-    //spawn two threads to de work.
-    let thread_one = thread::spawn(|| {
-        thread::sleep(Duration::from_millis(500));
-        println!("Thread One")
-    });
+// fn get_two_sites() {
+//     //spawn two threads to de work.
+//     let thread_one = thread::spawn(|| {
+//         thread::sleep(Duration::from_millis(500));
+//         println!("Thread One")
+//     });
 
-    let thread_two = thread::spawn(|| {
-        thread::sleep(Duration::from_millis(500));
-        println!("Thread Two")
-    });
-    let thread_three = thread::spawn(|| {
-        thread::sleep(Duration::from_millis(500));
-        println!("Thread Three")
-    });
-    let thread_four = thread::spawn(|| {
-        thread::sleep(Duration::from_millis(1000));
-        println!("Thread Four")
-    });
+//     let thread_two = thread::spawn(|| {
+//         thread::sleep(Duration::from_millis(500));
+//         println!("Thread Two")
+//     });
+//     let thread_three = thread::spawn(|| {
+//         thread::sleep(Duration::from_millis(500));
+//         println!("Thread Three")
+//     });
+//     let thread_four = thread::spawn(|| {
+//         thread::sleep(Duration::from_millis(1000));
+//         println!("Thread Four")
+//     });
 
-    // wait for both threads to complete.println
-    thread_one.join().expect("Thread one panicked");
-    thread_two.join().expect("Thread two panicked");
-    thread_three.join().expect("Thread two panicked");
-    thread_four.join().expect("Thread two panicked");
-}
+//     // wait for both threads to complete.println
+//     thread_one.join().expect("Thread one panicked");
+//     thread_two.join().expect("Thread two panicked");
+//     thread_three.join().expect("Thread two panicked");
+//     thread_four.join().expect("Thread two panicked");
+// }
 
-fn main() {
-    get_two_sites();
-}
+// fn main() {
+//     get_two_sites();
+// }
 
 /* By using Asyn funtion */
 
@@ -160,3 +160,27 @@ fn main() {
 // {
 //     block_on(aysnc_main());
 // }
+
+//================= async rust====================
+
+use std::thread;
+use std::time::Duration;
+use futures::executor::block_on;
+use async_std::task;
+
+async fn negate_async(n: i32) -> i32 {
+    println!("Negating {}", n);
+    task::sleep(std::time::Duration::from_secs(5)).await;
+    println!("Finished Sleeping for {}!", n);
+    n* -1
+}
+
+async fn f() -> i32 {
+    let neg = negate_async(1);
+    let neg_task = task::spawn(negate_async(2));
+    task::sleep(std::time::Duration::from_secs(1)).await;
+    neg.await + neg_task.await
+}
+fn main() {
+    block_on(f());
+}

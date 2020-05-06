@@ -1,1 +1,1 @@
-/home/naruto/Desktop/Q3/Asynchronous\ programming/async_pro/async_1/target/debug/async_1: /home/naruto/Desktop/Q3/Asynchronous\ programming/async_pro/async_1/src/main.rs
+/home/mak/Desktop/rust_practice/Asynchronous_Rust/target/debug/async_1: /home/mak/Desktop/rust_practice/Asynchronous_Rust/src/main.rs
