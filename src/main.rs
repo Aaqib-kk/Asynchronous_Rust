@@ -168,19 +168,51 @@ use std::time::Duration;
 use futures::executor::block_on;
 use async_std::task;
 
-async fn negate_async(n: i32) -> i32 {
-    println!("Negating {}", n);
-    task::sleep(std::time::Duration::from_secs(5)).await;
-    println!("Finished Sleeping for {}!", n);
-    n* -1
+// async fn negate_async(n: i32) -> i32 {
+//     println!("Negating {}", n);
+//     task::sleep(std::time::Duration::from_secs(5)).await;
+//     println!("Finished Sleeping for {}!", n);
+//     n* -1
+// }
+
+// async fn f() -> i32 {
+//     let neg = negate_async(1);
+//     let neg_task = task::spawn(negate_async(2));
+//     task::sleep(std::time::Duration::from_secs(1)).await;
+//     neg.await + neg_task.await
+// }
+// fn main() {
+//     block_on(f());
+// }
+
+//===========================
+async fn sing_song() {
+    task::sleep(Duration::from_secs(0)).await;
+    println!("Taray Zameen par");
 }
 
-async fn f() -> i32 {
-    let neg = negate_async(1);
-    let neg_task = task::spawn(negate_async(2));
-    task::sleep(std::time::Duration::from_secs(1)).await;
-    neg.await + neg_task.await
+async fn learn_song() {
+    task::sleep(Duration::from_secs(0)).await;
+    println!("Learning Song");
 }
+
+async fn learn_sing_song() {
+    let f1 = learn_song().await;
+    let f2 = sing_song().await;
+
+}
+
+async fn dance() {
+    task::sleep(Duration::from_secs(2)).await;
+    println!("Dancing");
+}
+
+async fn party() {
+    let f1 = learn_sing_song();
+    let f2 = dance();
+    futures::join!(f1,f2);
+}
+
 fn main() {
-    block_on(f());
+    block_on(party());
 }
